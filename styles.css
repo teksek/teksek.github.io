@@ -1,0 +1,54 @@
+#bg-full {
+    width: 1920px;
+    height: 240px;
+}
+
+#profile-picture-p {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+#profile-picture-img {
+    border: 4px black solid;
+    border-radius: 50%;
+    color: white;
+    object-fit: cover;
+    height: 120px;
+    width: 120px;
+    object-position: center;
+}
+
+html {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+}
+
+#name {
+    color:white;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+
+#site {
+    color:rgb(107, 114, 128);
+    text-align: center;
+    font-size: .875rem;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+#biography {
+    text-align: center;
+    font-size: .875rem;
+    color: rgb(156 163 175);
+    margin-top: 6px;
+}
