@@ -1,2 +1,2 @@
 # teksek-site
-site represents me
+about me
