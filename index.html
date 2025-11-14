@@ -1,44 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>teksek6</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght&display=swap" rel="stylesheet"> 
-    </head>
-    <body>
-        <div id="bg-full" style="width: 100%">
-            <img src="img/norwegia.jpg" alt="norwegia-bg" id="bg" style="object-position: center; object-fit: cover; width: 100%; height: 240px;">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>teksek6</title>
+    <meta name="description" content="teksek6's portfolio/landing site.">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Chart.js from CDN (lightweight, well-supported) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="wrap">
+        <header class="hero" role="banner">
+            <div class="avatar fade-up" style="animation-delay:.05s">
+                <img src="img/profile.jpg" alt="Zdjęcie profilowe">
+            </div>
+            <div class="fade-up" style="animation-delay:.1s">
+                <h1>teksek6</h1>
+                <div class="role">HTML • CSS • JS • Python</div>
+                <p class="bio">"First, solve the problem. Then, write the code"</p>
+                <div class="badges">
+                    <span class="badge">⌨️ Coder</span>
+                    <span class="badge">🐧 Linux enthusiast</span>
+                    <span class="badge">🎮 Gamer</span>
+                    <span class="badge">🦜 Budgie owner</span>
+                    <span class="badge">♊ Gemini</span>
+                    <span class="badge">🌌 Stargazer</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="grid">
+            <section>
+                <div class="card fade-up" style="animation-delay:.15s">
+                    <h2 style="margin-top:0">Projekty</h2>
+                    <div class="projects">
+                        <article class="project">
+                            <h3>CSS-Tools</h3>
+                            <p>Prosty zestaw narzędzi i generatorów CSS — gradienty, boksy, helpery.</p>
+                            <div class="meta" style="text-align: center; margin-top: 1rem">
+                                <a class="btn" href="https://teksek.github.io/CSS-Tools" target="_blank">Otwórz projekt</a>
+                            </div>
+                        </article>
+
+                        <article class="project">
+                            <h3>Widok wydajności</h3>
+                            <p>Wykres statusu projektów.</p>
+                            <div class="small-chart">
+                                <canvas id="projectsChart" aria-label="Wykres statusu projektów" role="img"></canvas>
+                            </div>
+                        </article>
+
+                        <!-- <article class="project">
+                            <h3>More in the future...</h3>
+                            <p></p>
+                        </article> -->
+
+                        <!-- <article class="project">
+                            <h3>More in the future...</h3>
+                            <p></p>
+                        </article> -->
+                    </div>
+                </div>
+
+                <div class="card fade-up" style="animation-delay:.18s;margin-top:14px">
+                    <h2 style="margin-top:0">Kontakt</h2>
+                    <p style="margin:12px 0">
+                        <a class="btn" href="mailto:miloszstanczyk12345@gmail.com" target="_blank">Wyślij e-mail</a>
+                        <a class="btn" href="https://discord.com/users/772830213620760596" target="_blank">Discord: teksek6</a>
+                    </p>
+                    <p style="margin:0;color:var(--muted)">Linki:</p>
+                    <p style="margin:8px 0"><a href="https://github.com/teksek" target="_blank">GitHub</a> · <a
+                            href="https://www.youtube.com/@teksek6" target="_blank">YouTube</a></p>
+                </div>
+            </section>
+
+            <aside class="sidebar">
+                <div class="card section fade-up" style="animation-delay:.12s">
+                    <h3 style="margin-top:0">Umiejętności</h3>
+                    <div class="skills" aria-hidden="false">
+                        <span class="skill">HTML</span>
+                        <span class="skill">CSS</span>
+                        <span class="skill">Responsive</span>
+                        <span class="skill">Vanilla JS</span>
+                        <span class="skill">Python</span>
+                        <span class="skill">Git</span>
+                        <span class="skill">Accessibility</span>
+                    </div>
+                </div>
+
+                <div class="card section fade-up" style="animation-delay:.14s">
+                    <h3 style="margin-top:0">Szybkie info</h3>
+                    <p style="margin:0;color:var(--muted)">Lokalizacja: Polska</p>
+                </div>
+
+                <div class="card section fade-up" style="animation-delay:.16s">
+                    <h3 style="margin-top:0">Wizualizacja umiejętności</h3>
+                    <div class="chart-wrap" style="margin-top:10px">
+                        <canvas id="skillsRadar" aria-label="Wykres umiejętności" role="img"></canvas>
+                    </div>
+                </div>
+
+                <!-- <div class="card section fade-up" style="animation-delay:.18s">
+                    <h3 style="margin-top:0">Widok wydajności</h3>
+                    <p style="margin: 0; color: var(--muted); font-size: 0.92rem">Wykres statusu projektów.</p>
+                    <div class="small-chart" style="margin-top: 10px">
+                        <canvas id="projectsChart" aria-label="Wykres statusu projektów" role="img"></canvas>
+                    </div>
+                </div> -->
+            </aside>
         </div>
-        <p id="profile-picture-p">
-            <img src="img/sarius-antihype.gif" alt="profile picture img" id="profile-picture-img">
-        </p>
-        <p id="name">teksek6 <img src="img/code-icon.png" style="width: 20px; height: 20px;" alt="code-icon"> </p> 
-        <p id="site">teksek.github.io</p>
-        <p id="biography">HTML, CSS and C# programmer.</p>
-        <div>
-            <p style="text-align: center; ">
-                <span style="color: rgb(0, 174, 255); border: 2px rgb(0, 174, 255) solid; padding: 7px; border-radius: 25px;">⌨️Coder</span>
-                <span style="color: rgb(0, 174, 255); border: 2px rgb(0, 174, 255) solid; padding: 7px; border-radius: 25px;">🦜Parrot Owner</span>
-                <span style="color: rgb(0, 174, 255); border: 2px rgb(0, 174, 255) solid; padding: 7px; border-radius: 25px;">♊Gemini</span>
-                <span style="color: rgb(0, 174, 255); border: 2px rgb(0, 174, 255) solid; padding: 7px; border-radius: 25px;">🌠Space Lover</span>
-            </p>
-        </div>
-        <div id="media" style="margin-bottom: 20px;">
-            <p style="text-align: center;">
-                <a href="https://github.com/teksek"><img src="img/github.png" style="width: 34px; height: 34px; margin-top: 8px; padding-right: 6px;" alt="github logo"></a>
-                <a href="https://music.youtube.com/channel/UCDc47Jy2yznQYf3G2Deip_Q"><img src="img/youtube-music.png" alt="youtube music logo" style="width: 34px; height: 34px; margin-top: 8px; padding-left: 6px; padding-right: 6px;"></a>
-                <a style="color: white; padding-bottom: 2px; height: 54px; width: 146.75px;" href="https://pastebin.com/Szz3qWUs">
-                    <img src="img/discord.png" style="width: 40px; height: 30px; padding: 6px; padding-bottom: 2px;" alt="discord logo">
-                </a>
-            </p>
-        </div>
-        <iframe style="border-radius:12px; display: block; margin: 0 auto;" src="https://open.spotify.com/embed/track/1kq7HYAGUDNEdh6K2LpnjW?utm_source=generator" width="536" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        <iframe style="display: block; margin-left: auto; margin-right: auto; margin-top: 10px; margin-bottom: 10px;" src="https://ptb.discord.com/widget?id=947291519063298088&theme=dark" width="536" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-        <iframe style="border-radius:12px; display: block; margin: 0 auto;" src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO3lglCT?utm_source=generator" width="536" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </body>
+
+        <footer>
+            <div>© <a href="https://github.com/teksek" target="_blank">teksek6</a></div>
+        </footer>
+    </main>
+</body>
 </html>
