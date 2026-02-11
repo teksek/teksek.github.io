@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     "CSS",
                     "JS",
                     "Responsive",
-                    "Accessibility",
+                    "Java",
                     "Git",
                     "Python",
                 ],
@@ -44,34 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 plugins: { 
                     legend: { display: false } 
                 },
-            },
-        });
-    }
-
-    const projectsCtx = document.getElementById("projectsChart");
-    if (projectsCtx) {
-        new Chart(projectsCtx, {
-            type: "bar",
-            data: {
-                labels: ["Zrobione", "W trakcie", "Planowane"],
-                datasets: [
-                    {
-                        label: "Ilość",
-                        data: [1, 2, 4],
-                        backgroundColor: [
-                            "rgba(0,174,255,0.9)",
-                            "rgba(99,102,241,0.85)",
-                            "rgba(16,185,129,0.85)",
-                        ],
-                        borderRadius: 8,
-                    },
-                ],
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: { legend: { display: false } },
-                scales: { y: { beginAtZero: true, ticks: { stepSize: 1 } } },
             },
         });
     }
