@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 ],
                 datasets: [
                     {
-                        label: "Poziom (0-10)",
+                        label: "Level (0-10)",
                         data: [9, 8, 7, 8, 5, 7, 5],
                         fill: true,
                         backgroundColor: "rgba(0,174,255,0.12)",
